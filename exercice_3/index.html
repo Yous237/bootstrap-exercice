@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <style>
+        .navbar {
+  border-bottom: 23px solid #36C4B3; /* Épaisseur et couleur de la bordure */
+  
+        }
+
+        .foobar .card-body{
+            background-color: #36C4B326;
+        }
+
+  @media (min-width:700px){
+        .hero-image img {
+            min-width: 660px !important;
+        }
+  
+}
+    </style>
+    <nav class="navbar navbar-expand-lg  p-2 p-md-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="img/Véhi’Loc.svg" alt="" srcset="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link active" aria-current="page" href="#qui">Qui-suis-je</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid hero d-flex align-items-center p-0">
+        <div class="d-flex flex-column flex-lg-row w-100">
+          <div class="col hero-left p-0 hero-image flex-fill">
+            <img src="img/unsplash_pB7bUdsc0FM.svg" class="img-fluid w-100 h-100" style="width: 100%;" alt="Voiture de location" />
+          </div>
+
+          <div class="col hero-right d-flex justify-content-center align-items-center p-3 flex-fill" >
+            <form class="p-4 bg-light shadow rounded w-100">
+                <h3 class="text-center mb-4">Réserver une voiture</h3>
+                <div class="mb-3">
+                    <label for="pickup-location" class="form-label">Lieu de prise en charge</label>
+                    <input type="text" class="form-control" id="pickup-location" placeholder="Ex: Paris" />
+                </div>
+                <div class="mb-3">
+                    <label for="pickup-date" class="form-label">Date de prise en charge</label>
+                    <input type="date" class="form-control" id="pickup-date" />
+                </div>
+                <div class="mb-3">
+                    <label for="return-date" class="form-label">Date de retour</label>
+                    <input type="date" class="form-control" id="return-date" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Type de véhicule</label>
+                    <div class="d-flex gap-3">
+                        <div>
+                            <input type="radio" name="vehicle-type" id="car" class="btn-check" />
+                            <label for="car" class="d-flex align-items-center justify-content-center">
+                                <svg width="50" height="51" viewBox="0 0 50 51" fill="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_50)"/>
+                                    <defs>
+                                    <pattern id="pattern0_201_50" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_201_50" transform="matrix(0.0111111 0 0 0.0112217 0 -0.00497513)"/>
+                                    </pattern>
+                                    <image id="image0_201_50" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" name="vehicle-type" id="bike" class="btn-check" />
+                            <label for="bike" class="d-flex align-items-center justify-content-center">
+                                <svg width="50" height="51" viewBox="0 0 50 51" fill="#36C4B3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_51)"/>
+                                    <defs>
+                                    <pattern id="pattern0_201_51" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_201_51" transform="matrix(0.0110016 0 0 0.0111111 0.00492611 0)"/>
+                                    </pattern>
+                                    <image id="image0_201_51" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAD1ElEQVR4nO3cT2gcVRwH8O/vZdgtrRCE4KUp3k3RHvx39FK8iB5EtJUKSVhnLqYYKpSC4ikUe4uG7EwOqyWNIeJRhKpUvYl6KIjgzUNU1MgayFpnU97PQ1NJxkmyO3/e7OL3AznsvnlvvvtlmNkhyQBERERERERERERE/2uS9mar1Tqyvb3tAzirqhMAjrmN1ZcOgO8ArMRxHM7MzMRVB0rzn6KXlpbGrbUfAXiwgjx53TTGPNVoNNarDpK0p+hWq3Wk2+1+heEs+a6bcRw/NmhHttn9Yud0McwlA8BDtVrt5apDJJnE67OVpCjewH2OPUWr6gNVBSmSiJysOkNS8oi+p5IUxRu4z5EsmkrCoh1h0Y6waEdYtCN77gzDMNSqggyBtqr+AOC9er3+7uTk5N/9TOYR3bt7ReRxEVnsdrtfLywsnOhnMovO5qTneR+vra3Vep3AorObaLfb53vdmEXnc2F+fr7ey4YsOp/7arXac71s6JWdZEh1Abzued7y9PT0z0UsyKJTqOobQRC8VeSaPHWkEJGrRa/JolP4vv9L0WuyaEdYtCMs2hEW7QiLdoRFO8KiHWHRjrBoR1i0IyzaEf5ytkS+7//bL49oR1i0IyzaERbtCIt2hEU7wqIdYdGOsGhHWLQjLNoRFu0Ii3aERTsiYRgeVdUrIvIigNGc622JyJyIrFpr140x49baMwAuYbCf+XFX0fn/BHCt0+m8JmEYNgH4RYQ0xjzRaDS+TQ40m82HReRzDHbZZeYPDYCXcsXbISJzaSEBIAiCb1T1chH7KUvJ+c8Vdo4WkdVDxt8val9lKDu/AVDI3wKPjo7+dNB4HMcD9/id3crMLyJXTafTeRXAO7hz4s5sc3Pz+EHj9Xp9PM/6ZSspf1tE3t7a2pr1ZmdnbwF4ZefnUFEUXVfV08n3d67OcwdM3e+pMNd933+yl30Xoar8fZ+jrbVf7jN0KYqiR9IGFhcXHwVwcZ95X/SbIY+q8vf9z0IjIyPXrLVvAhhJDB1T1RvNZvOytXZlbGxsvd1un8CdI+EigKMpy90GsNxvhjyqyp/6gMHDRFG0oqpnssxNWPZ9/1wB6/SlivyZvt55nncewG9Z5u6yYYy5kHONTKrIn6noqamp3wG8AOBWlvkA/lLVZxuNxq8Z5+dSRf7MNyy+799Q1WcA/NHn1A1VfToIgv0uSk64zp/rzjAIgk+MMacAfAjAHrK5BfCBtfZUEASf5dlvUVzmz3QxTBNF0YSqPq+qp0XkfgBjADYA/AjgU1VdDYLg+6L2V7Rhz09ERERERERE5NI/W0qGVasDE50AAAAASUVORK5CYII="/>
+                                    </defs>
+                                </svg>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="vehicle-type" id="bike" class="btn-check" />
+                            <label for="bike" class="d-flex align-items-center justify-content-center">
+                                <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_52)"/>
+                                    <defs>
+                                    <pattern id="pattern0_201_52" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_201_52" transform="matrix(0.0110016 0 0 0.0111111 0.00492611 0)"/>
+                                    </pattern>
+                                    <image id="image0_201_52" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="vehicle-type" id="bike" class="btn-check" />
+                            <label for="bike" class="d-flex align-items-center justify-content-center">
+                                <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_53)"/>
+                                    <defs>
+                                    <pattern id="pattern0_201_53" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_201_53" transform="matrix(0.0110016 0 0 0.0111111 0.00492611 0)"/>
+                                    </pattern>
+                                    <image id="image0_201_53" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                                    </defs>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3" style="background-color: #36C4B3; border-color: #36C4B3; border-radius: 15px;">Rechercher</button>
+            </form>
+        </div>
+        
+        </div>
+      </div>
+     
+      <div class="container-fluid">
+        <div class="container-fluid text-center py-4 ">
+            <h1 class="my-4">Nos offres du moment</h1>
+        </div>
+        <div class="container-fluid foobar d-flex px-lg-5 px-md-1 px-sm-1 justify-content-between gap-3 flex-md-row flex-column   ">
+            <div class="card">
+           
+                    <img class="card-img-top img-fluid" src="img/Rectangle 9.svg"  alt="">
+
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3>Louez des 18ans sans surcout</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+           
+                <img class="card-img-top img-fluid" src="img/Rectangle 9 (1).svg"  alt="">
+
+            <div class="card-body">
+                <div class="card-title">
+                    <h3>Location 24/7</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+           
+            <img class="card-img-top img-fluid" src="img/Rectangle 9.png"  alt="">
+
+        <div class="card-body">
+            <div class="card-title">
+                <h3>Déménagez en tout sérénité</h3>
+            </div>
+        </div>
+    </div>
+        </div>
+      </div>
+
+<!-- section -->
+    <div class="container-fluid">
+        <div class="container-fluid text-center py-4 ">
+            <h1 class="my-4">Nos gammes de vehicule</h1>
+        </div>
+        <!-- svgs -->
+        <div class="container-fluid d-flex gap-3 justify-content-center">
+            <svg width="50" height="51" viewBox="0 0 50 51" fill="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_50)"/>
+                <defs>
+                <pattern id="pattern0_201_50" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_201_50" transform="matrix(0.0111111 0 0 0.0112217 0 -0.00497513)"/>
+                </pattern>
+                <image id="image0_201_50" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAHb0lEQVR4nO2cX2xbVx3Hv9/jP3HisCQtdDBtY2gZAxVVSHNcNU5Yq20KtPEybVKh64bEA9sLD5MKrC+I0adMomJDmgR7QhorU5GGXGdl2YSyNk67JI0YQwU2pfzZYKJUU5IuTpzYvj8ekpXQnmtf+x47cXo+T05+x79zzsfX5x4fn2PAYrFYLBaLxWKxWCwWi2XzwFpXsPNU+g4E5IAIvwLiCwC2AojUut4y5AB8SODPgIwqJcfOdg9M17LCmomOZVJ3KqijAPbWsh5DCIhX4KhDE7373q1FBTUREM+kvwPgKIBwLfLXkCUKDo33Jp8zndi46K7MiZ8QfMJ03npC4uh4IvldkzmVyWTxTPp7jS4ZAERwqGt06JDJnMau6J2nUztEqXMAQqZyrjMFRznxc90DvzeRLGgiCQCIUs/BXfIiwJ85Sl6ScOSdqdh9c6bqrYYvj/ymPRIM31lk8RsEHwfQrCkWVA6fAXC3iTqNXNFdYye6KJxwCf9NhPdO9vb/1URdptl1JtVZdAKvA3KbLi6U+GTi/km/9RgZo5XDb7uEPioCuzeqZAA42z0wHSR3A5jXxSl8zEQ9vkVvP388LMSDuhghP57qSb7nt45acyax7x8QHHUJP9R58mST3zp8i26djXwNK5/2riYvoYLx+WitCIPPAljWhDq2thW+6je//6FDeMAl8urEzgc/9J2/TmR6+2dAvKYNuvfRM75E7xgejgrQrw2K/MpP7nVBoG2zAMndI8db/aT2JbopuvwAgKgmtNBSyKX95F4PctlwCvqbYks21DzgJ7cv0QT0byky9cae/dq7+Ebm7b6+rAiGdDHXvnqkatG7zry6BcB9upg4DThsrBIg3dre1z328rZq81Ytuujk90O/OjezsGVxuNq8600+8unfAtDdxIMFCWmnsV7wMXSI9q0klF+f375fN01qCKZisTwFL+uj+j57oSrRiUzqJoA9uljAcX3rNQ6uwwd7u8de+Ww1KasSXQAf1j1XgA/e7Jk6XU3OjcR44twpAT7QhFgQZ381OasS7VA/gSc4CT7lVJNzQ8GnHAJTLtGqho+KV+9Wvwv8i0v4P8UIPjcVSy7ogjuGh6PhaO5mMngjxbkZkBsJbhOwQ0TaFNEG8AaBtAFogSAM/t88/RP439JuAcBHVyKCLIhlAAsE5wC57AjmSM4RMgPwoohzUVTgXyKFi8vZyD/f7uvL6tp517l0SyCHvwP4lC5eVPjiVHfSzYGWitejlagDJV6ebYGcnOoaG3qWggApnY6DTlI6Ad4OLHcACpCPL3pCAAACElceX6H0ZRAE0LGm7JXHspqDXPuXACQoDgiFSHQZ8Ux6BsA0yGlCLohwWogic/IEXCQDgHJ4AMAPS7buKiq+ouOZ9DsAPl/p8zYZFyYS/XeAlPJFV6hojI5nUjFYyQBwe3zsxF2VPKEi0RRlZBF8c6Aer6S0p6Fj98hIZDE0/wsBvl5dozYnIngpWmj91ht79uTKlS0revv54+GWmZYhQrTrGtc9guFi82eSU7FYvlSxskNHdKblp1ZyCYi+4NK/nylfrARdo0P3kvK6uVZtWoTgPeM9/SNuBUpe0aQMmm/TpoQCebpUAVfRsdOpBICKpjDXOV3xsfQut6CraEVV9drr9YoIXZ25fwQnXF+dq1gQcNChOpZrn38/Mtt6S1AKBwU8DP1WKx3LIH4QEueXYz0DulWziklkUjflJfAoKEfgffuwr74ouDtzvRnGM+lLAD5ZrmGE3DPec/+b1zx/LL0Lgt95aSCEhyd6+0uOcdUSHx16Et7uNSb6cmmiJ6n9uqvUzbC9XMsEHNQ1DAAmEsmzIDzJC7H4gpdy1eA1t6G+dLgFSokuu7LnUB0rFQ/QebFcjo2Cob64OvO13SDXPv9+qfil2VDJ+MfkJfCon3aUYhnqm17KmeqLG772R0dmW28BcMEtvjVavNXTOiLlSHx0CCEWXzB+M4T8yEt5Y31xwZfooBQOAjjiFheFgx5ThUEZzEMNxjNmNjjlAcD7crHJvmjxNXQIeNhtkt51ZqgbxPf95K8nte5Lqemd18thEcTTATovXm5beu+GuaZbi0X1CIgnsf4HNyvFd18mepJapyZEW9bgJtro8TeLO1Z0nbCi64QVXSes6DphRdcJK7pOWNF1woquE1Z0nTD3MxJUdyspNIkE2gknAqhmobSJoIlKWkXYCkpICduEUBS0AgjJyhpCM1Z+gmL10CQVVvZIryWMa880ZnHNsWLOrdkXPI+VhbxFrvxgVV6IeQochzIHYZ6UeXE4T2KJwjnAWRSoHFmcdRhcojinTPgxJnoysa/hj1ToMLVsa4eOOmFF14lSois5YnzZb0M2MEY8uIqm4E8VVFBJ2YbClAdX0Y5CJVsFGmZbQaWY8uAqemYu8HMAf/CQ/K1sx+LzFTSmoTDlwVX09N69SwwG+stU8lZAob+Rz36Xw5SHskcrOk+ebNrS5jwGkYcBfGn1338EcCzbsfj8Zpa8FuvBYrFYLBaLxWKxWCwWi8VisVh88V+KEqKzAgJcnQAAAABJRU5ErkJggg=="/>
+                </defs>
+            </svg>
+            <svg width="50" height="51" viewBox="0 0 50 51" fill="#36C4B3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_51)"/>
+                <defs>
+                <pattern id="pattern0_201_51" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_201_51" transform="matrix(0.0110016 0 0 0.0111111 0.00492611 0)"/>
+                </pattern>
+                <image id="image0_201_51" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAAD1ElEQVR4nO3cT2gcVRwH8O/vZdgtrRCE4KUp3k3RHvx39FK8iB5EtJUKSVhnLqYYKpSC4ikUe4uG7EwOqyWNIeJRhKpUvYl6KIjgzUNU1MgayFpnU97PQ1NJxkmyO3/e7OL3AznsvnlvvvtlmNkhyQBERERERERERERE/2uS9mar1Tqyvb3tAzirqhMAjrmN1ZcOgO8ArMRxHM7MzMRVB0rzn6KXlpbGrbUfAXiwgjx53TTGPNVoNNarDpK0p+hWq3Wk2+1+heEs+a6bcRw/NmhHttn9Yud0McwlA8BDtVrt5apDJJnE67OVpCjewH2OPUWr6gNVBSmSiJysOkNS8oi+p5IUxRu4z5EsmkrCoh1h0Y6waEdYtCN77gzDMNSqggyBtqr+AOC9er3+7uTk5N/9TOYR3bt7ReRxEVnsdrtfLywsnOhnMovO5qTneR+vra3Vep3AorObaLfb53vdmEXnc2F+fr7ey4YsOp/7arXac71s6JWdZEh1Abzued7y9PT0z0UsyKJTqOobQRC8VeSaPHWkEJGrRa/JolP4vv9L0WuyaEdYtCMs2hEW7QiLdoRFO8KiHWHRjrBoR1i0IyzaEf5ytkS+7//bL49oR1i0IyzaERbtCIt2hEU7wqIdYdGOsGhHWLQjLNoRFu0Ii3aERTsiYRgeVdUrIvIigNGc622JyJyIrFpr140x49baMwAuYbCf+XFX0fn/BHCt0+m8JmEYNgH4RYQ0xjzRaDS+TQ40m82HReRzDHbZZeYPDYCXcsXbISJzaSEBIAiCb1T1chH7KUvJ+c8Vdo4WkdVDxt8val9lKDu/AVDI3wKPjo7+dNB4HMcD9/id3crMLyJXTafTeRXAO7hz4s5sc3Pz+EHj9Xp9PM/6ZSspf1tE3t7a2pr1ZmdnbwF4ZefnUFEUXVfV08n3d67OcwdM3e+pMNd933+yl30Xoar8fZ+jrbVf7jN0KYqiR9IGFhcXHwVwcZ95X/SbIY+q8vf9z0IjIyPXrLVvAhhJDB1T1RvNZvOytXZlbGxsvd1un8CdI+EigKMpy90GsNxvhjyqyp/6gMHDRFG0oqpnssxNWPZ9/1wB6/SlivyZvt55nncewG9Z5u6yYYy5kHONTKrIn6noqamp3wG8AOBWlvkA/lLVZxuNxq8Z5+dSRf7MNyy+799Q1WcA/NHn1A1VfToIgv0uSk64zp/rzjAIgk+MMacAfAjAHrK5BfCBtfZUEASf5dlvUVzmz3QxTBNF0YSqPq+qp0XkfgBjADYA/AjgU1VdDYLg+6L2V7Rhz09ERERERERE5NI/W0qGVasDE50AAAAASUVORK5CYII="/>
+                </defs>
+            </svg>
+            <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_52)"/>
+                <defs>
+                <pattern id="pattern0_201_52" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_201_52" transform="matrix(0.0110016 0 0 0.0111111 0.00492611 0)"/>
+                </pattern>
+                <image id="image0_201_52" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                </defs>
+            </svg>
+            <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect y="0.817749" width="50" height="49.5074" fill="url(#pattern0_201_53)"/>
+                <defs>
+                <pattern id="pattern0_201_53" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_201_53" transform="matrix(0.0110016 0 0 0.0111111 0.00492611 0)"/>
+                </pattern>
+                <image id="image0_201_53" width="90" height="90" xlink:href="data:image/png;base64,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"/>
+                </defs>
+            </svg>
+        </div>
+        <div class="container-fluid d-flex gap-3 justify-content-between flex-column flex-md-row px-1 px-lg-5">
+            <div class="card border border-0 p-3 text-center">
+                <div class="card-img-top">
+                    <img src="img/S8-renault-clio-comment-le-prix-de-base-s-est-envole-en-deux-ans-192370 1.svg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="card-title">
+                    <h3>Renault Clio</h3>
+                </div>
+                <div class="card-body m-0 p-0">
+                    <p class="fw-lighter ">A partir de 999$ </p>
+                </div>
+            </div>
+            <div class="card border border-0 p-3 text-center">
+                <div class="card-img-top">
+                    <img src="img/S8-renault-clio-comment-le-prix-de-base-s-est-envole-en-deux-ans-192370 1.svg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="card-title">
+                    <h3>Renault Clio</h3>
+                </div>
+                <div class="card-body m-0 p-0">
+                    <p class="fw-lighter ">A partir de 999$ </p>
+                </div>
+            </div>
+            <div class="card border border-0 p-3 text-center">
+                <div class="card-img-top">
+                    <img src="img/S8-renault-clio-comment-le-prix-de-base-s-est-envole-en-deux-ans-192370 1.svg" class="img-fluid" alt="" srcset="">
+                </div>
+                <div class="card-title">
+                    <h3>Renault Clio</h3>
+                </div>
+                <div class="card-body m-0 p-0">
+                    <p class="fw-lighter ">A partir de 999$ </p>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- faq -->
+    <div class="container-fluid py-5" style="background-color: rgba(54, 196, 179, 0.25);">
+        <div class="container-fluid text-center">
+            <h1>FAQ</h1>
+        </div>
+        <style>
+            .accordion-button{
+                background-color: #36C4B3!important;
+                color: #ffff!important;
+            }
+        </style>
+        <div class="container-fluid p-1 p-md-5">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Comment recuperer le vehivule que j'ai loué
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem aut animi magnam natus quia ex nesciunt porro sunt quaerat ipsa quibusdam omnis, incidunt voluptates recusandae doloremque. Veritatis beatae eligendi adipisci!</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Où déposer le véhicule une fois la location terminée ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem aut animi magnam natus quia ex nesciunt porro sunt quaerat ipsa quibusdam omnis, incidunt voluptates recusandae doloremque. Veritatis beatae eligendi adipisci!</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Est-ce que ma location est fourni avec une assurance ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Non. tu casses tu payes</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+
+    <div class="container-fluid py-5">
+        <div class="container-fluid text-center">
+            <h1>Contact</h1>
+        </div>
+        <div class="container-fluid p-5">
+            <div class="col justify-content-center text-align-center mb-2">
+                <form class="row g-3 p-md-5">
+                    <div class="col-md-6">
+                      <label for="inputNom" class="form-label">Nom</label>
+                      <input type="email" class="form-control" id="inputNom">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPrenom" class="form-label">Prenom</label>
+                      <input type="password" class="form-control" id="inputPrenom">
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddressMail" class="form-label">Address Mail</label>
+                      <input type="email" class="form-control" id="inputAddressMail" placeholder="exmple@exemple.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textareaMessage" class="form-label">Message</label>
+                        <textarea class="form-control" id="textareaMessage" rows="3"></textarea>
+                      </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary" style="background-color: #36C4B3; border-color: #36C4B3; border-radius: 15px;" >Envoyer le message</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        footer {
+            border-top: 23px solid #36C4B3; /* Épaisseur et couleur de la bordure */
+
+        }
+
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <footer class="p-5">
+        <div class="container-fluid d-flex flex-column flex-md-row justify-between">
+            <div class="container ">
+                <h3>Location de voiture</h3>
+                <ul>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="container ">
+                <h3>Location de voiture</h3>
+                <ul>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="container ">
+                <h3>Location de voiture</h3>
+                <ul>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="container ">
+                <h3>Location de voiture</h3>
+                <ul>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+                    <li>
+                        <a href="">Location sur Paris</a>
+                    </li>
+
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
