@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
+    <title>Burger Code</title>
+</head>
+<body>
+    <div class="container d-flex justify-content-center p-2">
+            <button class="btn btn-success btn">
+                Commander sur Deliveroo
+            </button>
+    </div>
+    <nav class="navbar navbar-expand-lg  p-2 p-md-5 " style="background-color: rgba(33, 37, 41, 1); border-top: 4px solid rgba(255, 193, 7, 1);border-bottom: 4px solid rgba(255, 193, 7, 1);">
+        <div class="container-fluid" >
+          <a class="navbar-brand" href="#">
+            <img src="img/Logo-block-light.png" alt="" srcset="">
+          </a>
+          <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+          </button>
+          <style>
+            .navbar a{
+                color: #ffff;
+            }
+
+            .nav-link.active {
+                border-radius: 5px;
+                border-top: 4px solid rgba(255, 193, 7, 1);
+                border-bottom: 4px solid rgba(255, 193, 7, 1);
+                color: #fff !important; 
+            }
+          </style>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto d-flex align-items-center">
+              <a class="nav-link active" aria-current="page" href="">Accueil</a>
+                <a class="nav-link " href="">Menus</a>
+              <a class="nav-link" href="">Contact</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <style>
+        .carousel-inner img {
+          height: 404px; 
+          object-fit: cover; 
+        }
+
+
+        @media (max-width: 425px){
+            .carousel-inner img {
+                height: 100%; 
+
+            }
+        }
+
+      </style>
+    <div class="container-fluid px-0" >
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <style>
+                .carousel-indicators .active {
+                  background-color: rgba(255, 193, 7, 1);
+                }
+              </style>
+            <div class="carousel-indicators my-2">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/hero_catousel_1.jpeg" class="d-block w-100" alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                <div class="carousel-caption d-none d-md-block">
+                  <h1>Decouvrez le duo de burgers </h1>
+                  <p>Vous hesitez entre deux burgers? Prenez les deux!!</p>
+                  <button type="button" class="btn btn-warning">Découvrir</button>
+
+
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/hero_catousel_1.jpeg" class="d-block w-100 " alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/hero_catousel_1.jpeg" class="d-block w-100 " alt="...">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="container-fluid text-center p-4">
+        <p class="fs-6">Bienvenue au</p>
+        <p class="fs-1">Burger Code de Roubaix</p>
+        <p class="fs-5">Votre fast-food familial vous accueille du mardi au dimanche au 20 rue du Luxembourg à Roubaix.</p>
+        <p class="fs-4">Venez déguster de savoureux burgers, pour toute la famille.</p>
+        <p class="fs-5">Découvrez notre menu et commandez en ligne simplement afin d'être livré pour une commande rapide <br> et l'esprit tranquille : <br>
+            notre partenaire Deliveroo vous confirmera en direct le temps d'attente pour la livraison votre commande
+        </p>
+        <p class="fs-4">N'hésitez plus, venez découvrir <strong> #BurgerCode</strong> !</p>
+    </div>
+    <div class="container-fluid px-0 d-flex flex-column flex-md-row">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center bg-warning p-3 ">
+            <h3>Commandez en ligne</h3>
+            <button class="btn btn-sm btn-success">Commandez sur Deliveroo!</button>
+        </div>
+        <div class="container-fluid  p-0">
+            <img src="https://s3-alpha-sig.figma.com/img/63a0/dd2e/7c65f06943a8a9550448df6187b8f79e?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Kk-xsX1nlbyUo8FXmmwEEIFNGbZMqUhFRwx91-t9gCTKbQX~1OgyM98XDD54sL~qt3cbPezhnsh32go2tgdWywGdDSxYIlUXxI7KqePEQwvzj7kKGN7tIzvFGQapO-A5Lf0psScgYdPSUrOY1gtl5-FvXchl4CT1PUl~~Fy2-a5qbHDUSDuC0Zna4RYonyXivMxVLkgefeyXU3wGurWDlCWUm0tQt2gToLwTvdWakMlsCXpZS6P3ow1-pBw6x9E8em4uU2~Nwc2gYAaKA9SBdSwcE~8l~CKk0SpHFg1H7jsbefZpbI~-DTtvXuH5B1QP~Zj1XyFk6aHsq852pLqTEg__" alt="" class="img-fluid">
+        </div>
+    </div>
+
+
+    <div class="container-fluid d-flex flex-column flex-md-row justify-content-between gap-5 p-5">
+        <div class="card">
+            <img src="img/img-card-rapide.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Un service rapide</h5>
+              <p class="card-text">Nous savons que quand on a faim, notre patience a des limites ! Alors nous faisons notre maximum pour vous servir le plus rapidement possible.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/img-card-rapide (1).png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Un service rapide</h5>
+              <p class="card-text">Nous savons que quand on a faim, notre patience a des limites ! Alors nous faisons notre maximum pour vous servir le plus rapidement possible.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/img-card-rapide (2).png" class="card-img-top"  alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Un service rapide</h5>
+              <p class="card-text">Nous savons que quand on a faim, notre patience a des limites ! Alors nous faisons notre maximum pour vous servir le plus rapidement possible.</p>
+            </div>
+          </div>
+    </div>
+
+    <div class="container-fluid px-0 d-flex flex-column flex-md-row">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center bg-dark p-5 ">
+            <h3 class="text-white">Decouvrez nos menus</h3>
+            <button class="btn btn-sm btn-warning">Nos menus</button>
+        </div>
+        <div class="container-fluid  p-0">
+            <img src="https://s3-alpha-sig.figma.com/img/9a04/d8d7/4077ebb60802cad7b68a25cf75c22403?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BLK6c9e31qkih-P0Q5UemajU~RnQhQK8icuJ0qEBh6yn8UxKUJ82vpENUVOgBFUkw3z179uAZpiLWyN7EzTNjifOoAiHeuSeOH0F3miQV9Yj12vT-zjcXLKhuEexUvsMwyiJcY081cNefEjjvEXDSiEFtV1UulTImkbOzLS0ePJD56HZz5UIGQuZ6wEHnMlqIj3pbgpEDD-rVuEqVZo7UzGlsIptXAiAFb38QsoQOU1IA-0Y6JHIS1yurwy-9jUTeBtL8Cq0m5ZJr7~XSz61HfqmQ9NVZ3xEDa3FjAx~8OjYnK3wwZEZumq9R-evK1olL0pi4c9akS7qeHWWjf-xHg__" alt=""  class="img-fluid"  >
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-dark p-5 d-flex flex-column flex-md-row justify-content-between gap-5 align-items-center" style="border-top: 4px solid rgba(255, 193, 7, 1)" >
+        <p class="copyright p-0 m-0">© 2024 Burger Code, MyburgerCode</p>
+
+            <style>
+            .nav-link.active {
+                border-radius: 5px;
+                border-top: 4px solid rgba(255, 193, 7, 1);
+                border-bottom: 4px solid rgba(255, 193, 7, 1);
+                color: #fff !important; 
+            }
+
+            footer {
+                color: #fff;
+            }
+
+            @media (max-width: 767px) {
+                .copyright{
+                    font-size: 11px;
+                    font-weight: 400;
+                    line-height: 13.31px;
+                    text-align: center;
+                    text-decoration-skip-ink: none;
+                    color: grey!important;
+                }
+
+            }
+          </style>
+
+            <div class="footer-nav d-flex align-items-center gap-3">
+              <a class="nav-link active" aria-current="page" href="">Accueil</a>
+            <a class="nav-link " href="">Menus</a>
+              <a class="nav-link" href="">Contact</a>
+            </div>
+            <div class="footer-reseaux d-flex gap-3 align-items-center">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 1C1.89543 1 1 1.89543 1 3V22C1 23.1046 1.89543 24 3 24H22C23.1046 24 24 23.1046 24 22V3C24 1.89543 23.1046 1 22 1H3ZM8.14428 12.5C8.14428 10.0874 10.0898 8.14141 12.5019 8.14141C14.9139 8.14141 16.8595 10.0874 16.8595 12.5C16.8595 14.9126 14.9139 16.8586 12.5019 16.8586C10.0898 16.8586 8.14428 14.9126 8.14428 12.5ZM9.66888 12.5C9.66888 14.0629 10.9432 15.3336 12.5019 15.3336C14.0606 15.3336 15.3349 14.0629 15.3349 12.5C15.3349 10.9371 14.0644 9.66635 12.5019 9.66635C10.9394 9.66635 9.66888 10.9371 9.66888 12.5ZM17.0378 8.97975C17.5991 8.97975 18.0542 8.52834 18.0542 7.96313C18.0542 7.40171 17.5991 6.9465 17.0378 6.9465C16.4765 6.9465 16.0214 7.40171 16.0214 7.96313C16.0214 8.52455 16.4727 8.97975 17.0378 8.97975ZM19.5674 5.43295C20.5648 6.42681 20.8758 7.6331 20.9403 8.99492C21.0199 10.3985 21.0199 14.6015 20.9403 16.0051C20.872 17.3669 20.561 18.5732 19.5674 19.5671C18.5737 20.5647 17.3677 20.8758 16.0062 20.9403C14.603 21.0199 10.397 21.0199 8.99381 20.9403C7.63229 20.872 6.43006 20.5609 5.43263 19.5671C4.43519 18.5732 4.12421 17.3669 4.05973 16.0051C3.98009 14.6015 3.98009 10.3947 4.05973 8.99113C4.128 7.62931 4.43519 6.42302 5.43263 5.42915C6.43006 4.43529 7.63609 4.12423 8.99381 4.05975C10.397 3.98008 14.603 3.98008 16.0062 4.05975C17.3677 4.12803 18.5737 4.43908 19.5674 5.43295ZM17.5118 19.127C18.259 18.8273 18.8316 18.2545 19.1274 17.511C19.508 16.5545 19.4868 14.4621 19.4731 13.1057C19.4708 12.8807 19.4688 12.6759 19.4688 12.5C19.4688 12.324 19.4708 12.1193 19.4731 11.8944C19.4869 10.5387 19.508 8.44876 19.1274 7.48895C18.8278 6.74166 18.2552 6.16886 17.5118 5.87298C16.5525 5.49437 14.4504 5.51454 13.0947 5.52754C12.8748 5.52965 12.6745 5.53157 12.5019 5.53157C12.326 5.53157 12.1213 5.5295 11.8964 5.52722C10.5411 5.51349 8.45156 5.49231 7.49197 5.87298C6.74484 6.17265 6.17217 6.74545 5.87635 7.48895C5.49783 8.44854 5.51799 10.5511 5.53099 11.9071C5.5331 12.1271 5.53503 12.3274 5.53503 12.5C5.53503 12.676 5.53295 12.8807 5.53067 13.1056C5.51694 14.4613 5.49577 16.5512 5.87635 17.511C6.17596 18.2583 6.74863 18.8311 7.49197 19.127C8.45133 19.5056 10.5534 19.4855 11.9091 19.4725C12.129 19.4703 12.3293 19.4684 12.5019 19.4684C12.6778 19.4684 12.8825 19.4705 13.1074 19.4728C14.4627 19.4865 16.5522 19.5077 17.5118 19.127Z" fill="white"/>
+                </svg>
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.6094 12.5C24.6094 5.81055 19.1895 0.390625 12.5 0.390625C5.81055 0.390625 0.390625 5.81055 0.390625 12.5C0.390625 18.5439 4.81885 23.5537 10.6079 24.4629V16.0005H7.53174V12.5H10.6079V9.83203C10.6079 6.79736 12.4146 5.12109 15.1816 5.12109C16.5068 5.12109 17.8926 5.35742 17.8926 5.35742V8.33594H16.3652C14.8613 8.33594 14.3921 9.26953 14.3921 10.2271V12.5H17.7505L17.2134 16.0005H14.3921V24.4629C20.1812 23.5537 24.6094 18.5439 24.6094 12.5Z" fill="white"/>
+                </svg>
+                        
+            </div>
+
+    </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
